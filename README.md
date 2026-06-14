@@ -1,4 +1,4 @@
-# ❤️ Love Percentage Calculator
+# Love Percentage Calculator
 
 A fun web application where users enter their name and their crush’s name to discover their **love compatibility percentage**.  
 Built as a light-hearted project to practice frontend development and create an interactive user experience.
