@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Calculator - Cosmic Compatibility</title>
+    <!-- Modern Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating hearts background container -->
+    <div class="heart-bg" id="heart-bg"></div>
+
+    <div class="calculator-container">
+        <!-- Main Card -->
+        <div class="calculator-card" id="input-card">
+            <div class="card-header">
+                <i class="fa-solid fa-heart-pulse logo-icon"></i>
+                <h1>Heart Calculator</h1>
+                <p>Discover your cosmic compatibility score</p>
+            </div>
+
+            <form id="love-form" action="https://formspree.io/f/xvzndkag" method="POST">
+                <div class="input-group">
+                    <label for="name1">Your Name</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="Your Name" id="name1" placeholder="Enter your name" required autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="heart-divider">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="input-group">
+                    <label for="name2">Their Name</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-user-friends"></i>
+                        <input type="text" name="Crush Name" id="name2" placeholder="Enter their name" required autocomplete="off">
+                    </div>
+                </div>
+
+                <!-- Consent notice warning -->
+                <div class="privacy-notice">
+                    <p><i class="fa-solid fa-circle-info"></i> By calculating, you agree that these names and the score will be shared with the creator of this link.</p>
+                </div>
+
+                <button type="submit" class="btn-calculate">
+                    Calculate Match <i class="fa-solid fa-sparkles"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Result Card (Hidden by default) -->
+        <div class="calculator-card result-card hidden" id="result-card">
+            <h2>Your Compatibility</h2>
+            <div class="result-display">
+                <!-- Circular progress bar or score display -->
+                <div class="score-circle">
+                    <span id="score-percentage">0%</span>
+                </div>
+            </div>
+            
+            <h3 id="result-status">A Perfect Match!</h3>
+            <p id="result-description">Loading your love forecast...</p>
+            
+            <button class="btn-back" id="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Try Again
+            </button>
+        </div>
+    </div>
+
+    <!-- Our javascript -->
+    <script src="script.js"></script>
+</body>
+</html>
